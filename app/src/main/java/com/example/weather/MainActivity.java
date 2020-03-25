@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                     String description = jsonPart.getString("description");
 
                     if (!main.equals("") && !description.equals("")) {
-                        message += main + ": " + description + "\r\n";
+                        message +=  " Description: " + description + "\r\n";
                     }
                 }
 
@@ -131,12 +131,10 @@ public class MainActivity extends AppCompatActivity {
 
            try {
                 JSONObject jsonObj = new JSONObject(s);
-
-               JSONObject main = jsonObj.getJSONObject("main");
+                JSONObject main = jsonObj.getJSONObject("main");
                String temp = main.getString("temp") + "°C";
-               tempratureViewField.setText(temp);
-
-
+               String tempDisp = "Temprature: " + temp;
+               tempratureViewField.setText(tempDisp);
             } catch (Exception e) {
 
                 Toast.makeText(getApplicationContext(),"Could not find weather :(",Toast.LENGTH_SHORT).show();
