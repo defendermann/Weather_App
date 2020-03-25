@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     TextView tempratureViewField;
     TextView maxTemp;
-    TextView minTemp;
+    TextView feelsLike;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         resultTextView = findViewById(R.id.resultTextView);
         tempratureViewField = findViewById(R.id.tempratureViewField);
         maxTemp = findViewById(R.id.maxTemp);
-        minTemp = findViewById(R.id.minTemp);
+        feelsLike = findViewById(R.id.feelsLike);
 
       button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject main = jsonObj.getJSONObject("main");
                 String minTempValue = main.getString("feels_like") + "°C";
                 String minTempDisp = "Feels Like:" + minTempValue;
-                minTemp.setText(minTempDisp);
+                feelsLike.setText(minTempDisp);
 
 
             } catch (Exception e) {

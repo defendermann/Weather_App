@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tempratureViewField" />
 
     <TextView
-        android:id="@+id/minTemp"
+        android:id="@+id/feelsLike"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
