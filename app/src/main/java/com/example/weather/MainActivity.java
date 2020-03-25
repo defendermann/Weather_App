@@ -2,7 +2,6 @@ package com.example.weather;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editText;
     TextView resultTextView;
     Button button;
-
+    TextView tempratureViewField;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         editText = findViewById(R.id.editText);
         resultTextView = findViewById(R.id.resultTextView);
+        tempratureViewField = findViewById(R.id.tempratureViewField);
 
       button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +121,21 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(),"Could not find weather :(",Toast.LENGTH_SHORT).show();
                 }
+
+            } catch (Exception e) {
+
+                Toast.makeText(getApplicationContext(),"Could not find weather :(",Toast.LENGTH_SHORT).show();
+
+                e.printStackTrace();
+            }
+
+           try {
+                JSONObject jsonObj = new JSONObject(s);
+
+               JSONObject main = jsonObj.getJSONObject("main");
+               String temp = main.getString("temp") + "°C";
+               tempratureViewField.setText(temp);
+
 
             } catch (Exception e) {
 
