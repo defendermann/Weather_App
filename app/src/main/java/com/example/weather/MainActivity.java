@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     TextView resultTextView;
     Button button;
     TextView tempratureViewField;
-    TextView maxTemp;
+    TextView humidity;
     TextView feelsLike;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         editText = findViewById(R.id.editText);
         resultTextView = findViewById(R.id.resultTextView);
         tempratureViewField = findViewById(R.id.tempratureViewField);
-        maxTemp = findViewById(R.id.maxTemp);
+        humidity = findViewById(R.id.humidity);
         feelsLike = findViewById(R.id.feelsLike);
 
       button = (Button) findViewById(R.id.button);
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject main = jsonObj.getJSONObject("main");
                 String maxTempValu = main.getString("humidity");
                 String maxTempDisp = "humidity:" + maxTempValu;
-                maxTemp.setText(maxTempDisp);
+                humidity.setText(maxTempDisp);
 
 
             } catch (Exception e) {

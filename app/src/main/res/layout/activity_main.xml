@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/resultTextView" />
 
     <TextView
-        android:id="@+id/maxTemp"
+        android:id="@+id/humidity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
@@ -70,12 +70,12 @@
         android:id="@+id/feelsLike"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
         android:text=""
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maxTemp" />
+        app:layout_constraintTop_toBottomOf="@+id/humidity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
