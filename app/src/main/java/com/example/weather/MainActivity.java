@@ -53,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         // set backgrounds for the text views
-        resultTextView.setBackgroundResource(R.drawable.rsz_textbg);
+      /*  resultTextView.setBackgroundResource(R.drawable.rsz_textbg);
         tempratureViewField.setBackgroundResource(R.drawable.rsz_textbg);
         humidity.setBackgroundResource(R.drawable.rsz_textbg);
-        feelsLike.setBackgroundResource(R.drawable.rsz_textbg);
+        feelsLike.setBackgroundResource(R.drawable.rsz_textbg);*/
 
       button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
                     String description = jsonPart.getString("description");
 
                     if (!main.equals("") && !description.equals("")) {
-                        message +=  " Description: " + description + "\r\n";
+                        message += description + "\r\n";
                     }
                 }
 
@@ -212,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
 
                 JSONObject main = jsonObj.getJSONObject("main");
                 String temp = main.getString("temp") + "°C";
-                String currentTemp = "Current Temp: " + temp;
+                String currentTemp = temp;
                 tempratureViewField.setText(currentTemp);
 
 
