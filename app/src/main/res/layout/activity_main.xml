@@ -6,25 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/mainactivitybg"
+        android:orientation="vertical">
+
+    </RelativeLayout>
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:text="get"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="SEARCH"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#ffffff"
+        app:backgroundTint="#27aac4"
+        />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="130dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="#090909"
+        android:text="Location..."
+        android:textColor="#ffffff"
         android:textColorLink="#090808"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,50 +49,69 @@
 
     <TextView
         android:id="@+id/resultTextView"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="450dp"
-        android:textColor="#000000"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="261dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text=" - - - - - - "
+        android:textColor="#ffffff"
         android:textColorHighlight="#70FDFDFD"
-        android:textSize="30sp"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tempratureViewField"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:text=""
-        android:textColor="#000000"
-        android:textSize="30sp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="261dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="- - - - - -"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="241dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text=" - - - - - - "
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultTextView" />
 
     <TextView
-        android:id="@+id/humidity"
-        android:layout_width="0dp"
+        android:id="@+id/feelsLike"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:text=""
-        android:textColor="#000000"
-        android:textSize="30sp"
+        android:layout_marginStart="300dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="241dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text=" - - - - - - "
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tempratureViewField" />
-
-    <TextView
-        android:id="@+id/feelsLike"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="#000000"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/humidity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
