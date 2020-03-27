@@ -51,13 +51,6 @@ public class MainActivity extends AppCompatActivity {
         humidity = findViewById(R.id.humidity);
         feelsLike = findViewById(R.id.feelsLike);
 
-
-        // set backgrounds for the text views
-      /*  resultTextView.setBackgroundResource(R.drawable.rsz_textbg);
-        tempratureViewField.setBackgroundResource(R.drawable.rsz_textbg);
-        humidity.setBackgroundResource(R.drawable.rsz_textbg);
-        feelsLike.setBackgroundResource(R.drawable.rsz_textbg);*/
-
       button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
