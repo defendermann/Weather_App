@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
     TextView tempratureViewField;
     TextView humidity;
     TextView feelsLike;
+    TextView temp_max;
+    TextView temp_min;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         tempratureViewField = findViewById(R.id.tempratureViewField);
         humidity = findViewById(R.id.humidity);
         feelsLike = findViewById(R.id.feelsLike);
+        temp_max = findViewById(R.id.temp_max);
+        temp_min = findViewById(R.id.temp_min);
 
       button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -244,6 +248,35 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Could not find weather :(",Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
+
+            try {
+                JSONObject jsonObj = new JSONObject(s);
+
+                JSONObject main = jsonObj.getJSONObject("main");
+                String minTempValue = main.getString("temp_max") + "°";
+                String minTempDisp = "Max:" + minTempValue;
+                temp_max.setText(minTempDisp);
+
+
+            } catch (Exception e) {
+                Toast.makeText(getApplicationContext(),"Could not find weather :(",Toast.LENGTH_SHORT).show();
+                e.printStackTrace();
+            }
+
+            try {
+                JSONObject jsonObj = new JSONObject(s);
+
+                JSONObject main = jsonObj.getJSONObject("main");
+                String minTempValue = main.getString("temp_min") + "°";
+                String minTempDisp = "Min:" + minTempValue;
+                temp_min.setText(minTempDisp);
+
+
+            } catch (Exception e) {
+                Toast.makeText(getApplicationContext(),"Could not find weather :(",Toast.LENGTH_SHORT).show();
+                e.printStackTrace();
+            }
+
 
         }
     }
