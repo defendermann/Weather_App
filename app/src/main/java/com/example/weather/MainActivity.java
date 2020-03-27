@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     LocationListener locationListener;
 
     EditText editText;
-    TextView resultTextView;
+    TextView description;
     Button button;
     TextView tempratureViewField;
     TextView humidity;
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         editText = findViewById(R.id.editText);
-        resultTextView = findViewById(R.id.resultTextView);
+        description = findViewById(R.id.description);
         tempratureViewField = findViewById(R.id.tempratureViewField);
         humidity = findViewById(R.id.humidity);
         feelsLike = findViewById(R.id.feelsLike);
@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (!message.equals("")) {
-                    resultTextView.setText(message);
+                    description.setText(message);
                 } else {
                     Toast.makeText(getApplicationContext(),"Could not find weather :(",Toast.LENGTH_SHORT).show();
                 }
