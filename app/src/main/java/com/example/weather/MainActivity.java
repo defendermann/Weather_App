@@ -253,9 +253,9 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject jsonObj = new JSONObject(s);
 
                 JSONObject main = jsonObj.getJSONObject("main");
-                String minTempValue = main.getString("temp_max") + "°";
-                String minTempDisp = "Max:" + minTempValue;
-                temp_max.setText(minTempDisp);
+                String maxTempValue = main.getString("temp_max") + "°";
+                String maxTempDisp = "Max:" + maxTempValue;
+                temp_max.setText(maxTempDisp);
 
 
             } catch (Exception e) {
