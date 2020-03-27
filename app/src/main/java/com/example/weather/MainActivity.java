@@ -208,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
                 double tempStr = Double.parseDouble(temp);
                 int tempInt = (int)tempStr;
                 String currentTemp = Integer.toString(tempInt);
-                String tempDisp = currentTemp + "°C";
+                String tempDisp = currentTemp + "°";
                 tempratureViewField.setText(tempDisp);
 
 
