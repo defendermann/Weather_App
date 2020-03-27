@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         feelsLike = findViewById(R.id.feelsLike);
         temp_max = findViewById(R.id.temp_max);
         temp_min = findViewById(R.id.temp_min);
+        editText.setHint("Enter Location...");
 
       button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
