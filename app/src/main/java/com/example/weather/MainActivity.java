@@ -211,9 +211,12 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject jsonObj = new JSONObject(s);
 
                 JSONObject main = jsonObj.getJSONObject("main");
-                String temp = main.getString("temp") + "°C";
-                String currentTemp = temp;
-                tempratureViewField.setText(currentTemp);
+                String temp = main.getString("temp");
+                double tempStr = Double.parseDouble(temp);
+                int tempInt = (int)tempStr;
+                String currentTemp = Integer.toString(tempInt);
+                String tempDisp = currentTemp + "°C";
+                tempratureViewField.setText(tempDisp);
 
 
             } catch (Exception e) {
