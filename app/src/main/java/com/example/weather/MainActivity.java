@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     TextView feelsLike;
     TextView temp_max;
     TextView temp_min;
+    TextView weatherIcon;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         feelsLike = findViewById(R.id.feelsLike);
         temp_max = findViewById(R.id.temp_max);
         temp_min = findViewById(R.id.temp_min);
+        weatherIcon = findViewById(R.id.weatherIcon);
         editText.setHint("Enter Location...");
 
       button = (Button) findViewById(R.id.button);
@@ -188,8 +190,39 @@ public class MainActivity extends AppCompatActivity {
                     String main = jsonPart.getString("main");
                     String description = jsonPart.getString("description");
 
+                   try {
+                       String clear = "clear sky";
+                       String clouds = "few clouds";
+                       String snow = "snow";
+                       String lightsnow = "light snow";
+                       String mist = "mist";
+                       String haze = "haze";
+                       String rain = "rain";
+                       if (clear.equals(description)) {
+                           weatherIcon.setBackgroundResource(R.drawable.sunny);
+                       }
+                       if (clouds.equals(description)) {
+                           weatherIcon.setBackgroundResource(R.drawable.fewclouds);
+                       }
+                       if (snow.equals(description) || lightsnow.equals(description)) {
+                           weatherIcon.setBackgroundResource(R.drawable.snow);
+                       }
+                       if (mist.equals(description) || haze.equals(description)) {
+                           weatherIcon.setBackgroundResource(R.drawable.mist);
+                       }
+                       if (rain.equals(description)) {
+                           weatherIcon.setBackgroundResource(R.drawable.rain);
+                       }
+                   }
+                   catch (Exception e){
+                       e.printStackTrace();
+                   }
+
+
+
                     if (!main.equals("") && !description.equals("")) {
                         message += description + "\r\n";
+
                     }
                 }
 
