@@ -197,6 +197,7 @@ public class MainActivity extends AppCompatActivity {
                        String lightsnow = "light snow";
                        String mist = "mist";
                        String haze = "haze";
+                       String smoke = "smoke";
                        String rain = "rain";
                        if (clear.equals(description)) {
                            weatherIcon.setBackgroundResource(R.drawable.sunny);
@@ -207,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
                        if (snow.equals(description) || lightsnow.equals(description)) {
                            weatherIcon.setBackgroundResource(R.drawable.snow);
                        }
-                       if (mist.equals(description) || haze.equals(description)) {
+                       if (mist.equals(description) || haze.equals(description) || smoke.equals(description)) {
                            weatherIcon.setBackgroundResource(R.drawable.mist);
                        }
                        if (rain.equals(description)) {
@@ -310,8 +311,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Could not find weather :(",Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
-
-
         }
     }
 }
