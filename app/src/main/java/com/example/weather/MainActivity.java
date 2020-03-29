@@ -197,6 +197,7 @@ public class MainActivity extends AppCompatActivity {
                        String mist = "mist";
                        String haze = "haze";
                        String smoke = "smoke";
+                       String lightrain = "light rain";
                        String rain = "rain";
                        if (clear.equals(description)) {
                            weatherIcon.setBackgroundResource(R.drawable.sunny);
@@ -210,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
                        if (mist.equals(description) || haze.equals(description) || smoke.equals(description)) {
                            weatherIcon.setBackgroundResource(R.drawable.mist);
                        }
-                       if (rain.equals(description)) {
+                       if (rain.equals(description) || lightrain.equals(description)) {
                            weatherIcon.setBackgroundResource(R.drawable.rain);
                        }
                    }
