@@ -192,6 +192,8 @@ public class MainActivity extends AppCompatActivity {
                    try {
                        String clear = "clear sky";
                        String clouds = "few clouds";
+                       String brokenClouds = "broken clouds";
+                       String scatteredClouds = "scattered clouds";
                        String snow = "snow";
                        String lightsnow = "light snow";
                        String mist = "mist";
@@ -199,10 +201,18 @@ public class MainActivity extends AppCompatActivity {
                        String smoke = "smoke";
                        String lightrain = "light rain";
                        String rain = "rain";
+
                        if (clear.equals(description)) {
                            weatherIcon.setBackgroundResource(R.drawable.sunny);
                        }
+
                        if (clouds.equals(description)) {
+                           weatherIcon.setBackgroundResource(R.drawable.fewclouds);
+                       }
+                       if (brokenClouds.equals(description)) {
+                           weatherIcon.setBackgroundResource(R.drawable.fewclouds);
+                       }
+                       if (scatteredClouds.equals(description)) {
                            weatherIcon.setBackgroundResource(R.drawable.fewclouds);
                        }
                        if (snow.equals(description) || lightsnow.equals(description)) {
