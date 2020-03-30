@@ -250,65 +250,27 @@ public class MainActivity extends AppCompatActivity {
                 String tempDisp = currentTemp + "°";
                 tempratureViewField.setText(tempDisp);
 
-
-            } catch (Exception e) {
-
-                Toast.makeText(getApplicationContext(),"Could not find weather :(",Toast.LENGTH_SHORT).show();
-
-                e.printStackTrace();
-            }
-            try {
-                JSONObject jsonObj = new JSONObject(s);
-
-                JSONObject main = jsonObj.getJSONObject("main");
                 String humidityValue = main.getString("humidity");
                 String humidityDisp = "humidity:" + humidityValue;
                 humidity.setText(humidityDisp);
 
-
-            } catch (Exception e) {
-                Toast.makeText(getApplicationContext(),"Could not find weather :(",Toast.LENGTH_SHORT).show();
-                e.printStackTrace();
-            }
-            try {
-                JSONObject jsonObj = new JSONObject(s);
-
-                JSONObject main = jsonObj.getJSONObject("main");
                 String feelsLikeTempValue = main.getString("feels_like") + "°C";
                 String feelsLikeTempDisp = "Feels Like:" + feelsLikeTempValue;
                 feelsLike.setText(feelsLikeTempDisp);
 
-
-            } catch (Exception e) {
-                Toast.makeText(getApplicationContext(),"Could not find weather :(",Toast.LENGTH_SHORT).show();
-                e.printStackTrace();
-            }
-
-            try {
-                JSONObject jsonObj = new JSONObject(s);
-
-                JSONObject main = jsonObj.getJSONObject("main");
                 String maxTempValue = main.getString("temp_max") + "°";
                 String maxTempDisp = "Max:" + maxTempValue;
                 temp_max.setText(maxTempDisp);
 
-
-            } catch (Exception e) {
-                Toast.makeText(getApplicationContext(),"Could not find weather :(",Toast.LENGTH_SHORT).show();
-                e.printStackTrace();
-            }
-
-            try {
-                JSONObject jsonObj = new JSONObject(s);
-
-                JSONObject main = jsonObj.getJSONObject("main");
                 String minTempValue = main.getString("temp_min") + "°";
                 String minTempDisp = "Min:" + minTempValue;
                 temp_min.setText(minTempDisp);
 
 
             } catch (Exception e) {
+
                 Toast.makeText(getApplicationContext(),"Could not find weather :(",Toast.LENGTH_SHORT).show();
+
                 e.printStackTrace();
             }
         }
