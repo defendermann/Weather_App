@@ -274,9 +274,9 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject jsonObj = new JSONObject(s);
 
                 JSONObject main = jsonObj.getJSONObject("main");
-                String minTempValue = main.getString("feels_like") + "°C";
-                String minTempDisp = "Feels Like:" + minTempValue;
-                feelsLike.setText(minTempDisp);
+                String feelsLikeTempValue = main.getString("feels_like") + "°C";
+                String feelsLikeTempDisp = "Feels Like:" + feelsLikeTempValue;
+                feelsLike.setText(feelsLikeTempDisp);
 
 
             } catch (Exception e) {
