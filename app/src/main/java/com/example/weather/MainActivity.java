@@ -261,9 +261,9 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject jsonObj = new JSONObject(s);
 
                 JSONObject main = jsonObj.getJSONObject("main");
-                String maxTempValu = main.getString("humidity");
-                String maxTempDisp = "humidity:" + maxTempValu;
-                humidity.setText(maxTempDisp);
+                String humidityValue = main.getString("humidity");
+                String humidityDisp = "humidity:" + humidityValue;
+                humidity.setText(humidityDisp);
 
 
             } catch (Exception e) {
