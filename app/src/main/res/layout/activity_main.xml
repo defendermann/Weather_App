@@ -10,14 +10,14 @@
         android:id="@+id/relativeLayout2"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/bgone"
+        android:background="#ffb2a7"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/lng"
@@ -41,7 +41,21 @@
             android:text="- - - - "
             android:textColor="#ffffff" />
 
+
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="439dp"
+        android:layout_height="315dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        app:srcCompat="@drawable/e6739f" />
 
     <Button
         android:id="@+id/button"
@@ -97,9 +111,9 @@
         android:id="@+id/tempratureViewField"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
+        android:layout_marginStart="160dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="240dp"
+        android:layout_marginBottom="250dp"
         android:gravity="center_vertical|center_horizontal"
         android:text=""
         android:textColor="#ffffff"
@@ -115,9 +129,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginEnd="70dp"
-        android:layout_marginBottom="241dp"
+        android:layout_marginBottom="130dp"
         android:gravity="center_vertical|center_horizontal"
-        android:text=" - - - - - - "
+        android:text=""
         android:textColor="#ffffff"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -127,13 +141,13 @@
 
     <TextView
         android:id="@+id/feelsLike"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="70dp"
         android:gravity="center_vertical|center_horizontal"
-        android:text=" - - - - - - "
+        android:text=""
         android:textColor="#ffffff"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -146,7 +160,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginEnd="230dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="80dp"
         android:gravity="center_vertical|center_horizontal"
         android:text=""
         android:textColor="#ffffff"
@@ -161,7 +175,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="230dp"
         android:layout_marginEnd="70dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="80dp"
         android:gravity="center_vertical|center_horizontal"
         android:text=""
         android:textColor="#ffffff"
@@ -175,7 +189,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="200dp"
+        android:layout_marginEnd="220dp"
         android:layout_marginBottom="450dp"
         android:gravity="center_vertical|center_horizontal"
         android:text=""
