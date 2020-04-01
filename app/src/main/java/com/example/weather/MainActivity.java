@@ -203,26 +203,26 @@ public class MainActivity extends AppCompatActivity {
                        String rain = "rain";
 
                        if (clear.equals(description)) {
-                           weatherIcon.setBackgroundResource(R.drawable.sunny);
+                           weatherIcon.setBackgroundResource(R.drawable.sunnyone);
                        }
 
                        if (clouds.equals(description)) {
-                           weatherIcon.setBackgroundResource(R.drawable.fewclouds);
+                           weatherIcon.setBackgroundResource(R.drawable.fewcloudsone);
                        }
                        if (brokenClouds.equals(description)) {
-                           weatherIcon.setBackgroundResource(R.drawable.fewclouds);
+                           weatherIcon.setBackgroundResource(R.drawable.fewcloudsone);
                        }
                        if (scatteredClouds.equals(description)) {
-                           weatherIcon.setBackgroundResource(R.drawable.fewclouds);
+                           weatherIcon.setBackgroundResource(R.drawable.fewcloudsone);
                        }
                        if (snow.equals(description) || lightsnow.equals(description)) {
-                           weatherIcon.setBackgroundResource(R.drawable.snow);
+                           weatherIcon.setBackgroundResource(R.drawable.snowone);
                        }
                        if (mist.equals(description) || haze.equals(description) || smoke.equals(description)) {
-                           weatherIcon.setBackgroundResource(R.drawable.mist);
+                           weatherIcon.setBackgroundResource(R.drawable.hazeone);
                        }
                        if (rain.equals(description) || lightrain.equals(description)) {
-                           weatherIcon.setBackgroundResource(R.drawable.rain);
+                           weatherIcon.setBackgroundResource(R.drawable.rainone);
                        }
                    }
                    catch (Exception e){
