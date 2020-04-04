@@ -70,7 +70,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="#ffffff"
-        app:backgroundTint="#27aac4"
+        app:backgroundTint="#47bee6"
         />
 
     <EditText
