@@ -302,7 +302,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.item_1:
                 openAboutActivity();
-                return true;
+                break;
             default: super.onOptionsItemSelected(item);
         }
         return true;
