@@ -1,4 +1,4 @@
-name: Buildct
+name: Buildctt
 
 on:
   pull_request:
