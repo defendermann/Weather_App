@@ -21,13 +21,11 @@ jobs:
           java-version: 1.8
       - name: Unit tests
         run: bash ./gradlew test --stacktrace
-      - uses: actions/checkout@master
-      - name: send custom message with args
-        uses: appleboy/telegram-action@master
+      - uses: yanzay/notify-telegram@v0.1.0
+        if: always()
         with:
-         to: ${{ secrets.TELEGRAM_TO }}
+         chat: ${{ secrets.TELEGRAM_TO }} # user id or channel name secret
          token: ${{ secrets.TELEGRAM_TOKEN }}
-         message: Build Success
         
   apk:
     name: Generate APK
