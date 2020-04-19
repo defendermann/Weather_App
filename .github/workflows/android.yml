@@ -27,7 +27,8 @@ jobs:
         with:
          to: ${{ secrets.TELEGRAM_TO }}
          token: ${{ secrets.TELEGRAM_TOKEN }}
-         message: Send Post to Subscribers
+         message: |
+          echo This event is a pull request that had an assignee removed.
         
   apk:
     name: Generate APK
