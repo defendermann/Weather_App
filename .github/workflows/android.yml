@@ -1,4 +1,4 @@
-name: Buildc
+name: Buildci
 
 on:
   pull_request:
