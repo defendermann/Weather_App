@@ -26,6 +26,7 @@ jobs:
         with:
          chat: ${{ secrets.TELEGRAM_TO }} # user id or channel name secret
          token: ${{ secrets.TELEGRAM_TOKEN }}
+         status: ${{ job.status }}
         
   apk:
     name: Generate APK
