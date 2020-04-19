@@ -27,7 +27,7 @@ jobs:
         with:
          to: ${{ secrets.TELEGRAM_TO }}
          token: ${{ secrets.TELEGRAM_TOKEN }}
-         message: Build Started
+         message: Send Post to Subscribers
         
   apk:
     name: Generate APK
